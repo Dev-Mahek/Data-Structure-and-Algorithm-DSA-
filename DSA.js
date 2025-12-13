@@ -172,3 +172,45 @@ amt += unit*4
 console.log(amt);
 
 //Q. INR denomination
+
+let currencey = 4823
+// 'currencey' stores the total amount to be broken into denominations
+
+// Check if the amount is greater than or equal to 500
+if(currencey >= 500){
+    // Calculate how many 500-rupee notes can be made
+    console.log("500 notes: "+ Math.floor(currencey/500));
+    // Calculate the remaining amount after using 500 notes
+    currencey = currencey % 500
+}
+if(currencey >= 200){
+    console.log("200 notes: "+ Math.floor(currencey/200));
+    currencey = currencey % 200
+}
+if(currencey >= 100){
+    console.log("100 notes: "+ Math.floor(currencey/100));
+    currencey = currencey % 100
+}
+if(currencey >= 50){
+    console.log("50 notes: "+ Math.floor(currencey/50));
+    currencey = currencey % 50
+}
+if(currencey >= 20){
+    console.log("20 notes: "+ Math.floor(currencey/20));
+    currencey = currencey % 20
+}
+if(currencey >= 10){
+    console.log("10 notes: "+ Math.floor(currencey/10));
+    currencey = currencey % 10
+}
+if(currencey >= 5){
+    console.log("5 coins: "+ Math.floor(currencey/5));
+    currencey = currencey % 5
+}
+if(currencey >= 2){
+    console.log("2 coins: "+ Math.floor(currencey/2));
+    currencey = currencey % 2
+}
+if(currencey === 1){
+    console.log("1 coins: "+ currencey);
+}
