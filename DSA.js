@@ -134,4 +134,20 @@ console.log((3.14159).toFixed(2));
 
 // ----------Conditionals-----------
 
+//Q. A discount calculator
+
+let amount = Number(prompt("what is total amount"))
+let disc = 0
+
+if(amount > 0 && amount <= 5000){
+    disc = 0
+}else if(amount > 5000 && amount <= 7000){
+    disc = 5
+}else if(amount > 7000 && amount <= 9000){
+    disc = 10
+}else if(amount > 9000){
+    disc = 20
+}
+console.log(amount - Math.floor((disc*amount)/100));
+
 
