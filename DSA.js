@@ -214,3 +214,5 @@ if(currencey >= 2){
 if(currencey === 1){
     console.log("1 coins: "+ currencey);
 }
+
+// -------------------------------------------------
