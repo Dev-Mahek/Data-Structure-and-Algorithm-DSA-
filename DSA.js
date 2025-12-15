@@ -215,3 +215,22 @@ if(currencey === 1){
     console.log("1 coins: "+ currencey);
 }
 
+// -------------Loops--------------
+
+// Q. Sum of natural numbers by taking user input
+
+let sum = 0;
+let user = Number(prompt("Enter no."))
+
+if(isNaN(user)){
+    console.log("Invalid input");
+}else{
+    if(user > 0){
+    for(var n = 1; n<=user; n++){
+        sum = n + sum
+    }
+    console.log (sum)
+    }else{
+        console.log("Enter positive number");
+    }
+}
