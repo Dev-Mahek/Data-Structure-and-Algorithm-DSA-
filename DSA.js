@@ -217,7 +217,7 @@ if(currencey === 1){
 
 // -------------Loops--------------
 
-// Q. Sum of natural numbers by taking user input
+//Q. Sum of natural numbers by taking user input
 
 let sum = 0;
 let user = Number(prompt("Enter no."))
@@ -234,3 +234,25 @@ if(isNaN(user)){
         console.log("Enter positive number");
     }
 }
+
+//Q. factors of a number
+
+let fact = Number(prompt("Enter a no."));
+let sum = 0;
+
+if (isNaN(fact)) {
+  console.log("Invalid input");
+} else {
+  if (fact > 0) {
+    for (var f = 1; f <= fact; f++) {
+      if (fact % f === 0) {
+        sum = sum + f;
+      }
+    }
+  } else {
+    console.log("Enter positive number");
+  }
+  console.log(sum);
+}
+
+//Q. Prime no.
