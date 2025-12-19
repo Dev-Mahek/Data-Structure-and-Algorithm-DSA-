@@ -256,3 +256,64 @@ if (isNaN(fact)) {
 }
 
 //Q. Prime no.
+
+var isPrime = true;
+
+for(var i = 2; i<=Math.floor(8/2); i++){
+    if(8%i === 0){
+        isPrime = false;
+        break;
+    }
+}
+console.log(isPrime);
+
+//Q4. sum digits 
+
+let n = 1234
+let sum = 0
+
+while(n>0){
+    var rem = n%10
+    sum = sum + rem
+    n = Math.floor(n/10)
+}
+
+// console.log(sum);
+
+//Q5. reverse the digits
+
+let n = 1234
+let rev = 0
+
+while(n>0){
+    var rem = n%10
+    rev = rev*10 + rem //👈reverse's equaltion
+    n = Math.floor(n/10)
+}
+console.log(rev);
+
+//Q6. guess the number
+
+let random = Math.floor(Math.random()*100)+1   //from 1 to 100 range
+let guess = 0;
+let attempt = 0;
+
+while(guess != random && attempt < 5){
+    guess = Number(prompt("Guess the no."))
+    attempt++
+    if(isNaN(guess) || guess<1  || guess>100){
+        console.log("Chutia banay tum ko👆🤬");
+        continue
+    }
+    if(guess>random){
+        console.log("too high");
+    }
+    else if(guess<random){
+        console.log("too low");
+    }else{
+        console.log("Mubarak ho 🥳");
+        
+    }
+}
+console.log("Your attempts are " + attempt);
+
