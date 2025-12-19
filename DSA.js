@@ -317,3 +317,77 @@ while(guess != random && attempt < 5){
 }
 console.log("Your attempts are " + attempt);
 
+// ----------Pattern Printing------------
+
+let prompt = require("prompt-sync")(); //to print and giving input in terminal we need to import this
+let a = prompt("enter no in terminal ")
+// // process.stdout.write(a)
+
+for(let i=1; i<=a; i++){
+    for(let j=1; j<=a; j++){  //For each ONE run of the outer loop, the inner loop runs COMPLETELY
+        process.stdout.write("* ")
+    }
+    console.log();
+}
+
+//Q. Right angle triangle
+
+let a = prompt("enter no in terminal ")
+
+for(let i=1; i<=a; i++){
+    for(let j=1; j<=i; j++){
+        process.stdout.write("* ")
+    }
+    console.log();
+}
+
+//Q. right angle triangle with no.
+
+let a = prompt("enter no in terminal ")
+
+for(let i=1; i<=a; i++){
+    for(let j=1; j<=i; j++){
+        process.stdout.write(j+" ")
+    }
+    console.log();
+}
+
+//Q. right angle triangle with letters
+
+let a = prompt("enter no in terminal ")
+
+for(let i=1; i<=a; i++){
+    let ascii = 65;
+    for(let j=1; j<=i; j++){
+        process.stdout.write(String.fromCharCode(ascii)+" ")
+        ascii++
+    }
+    console.log();
+}
+
+//Q. Inverted right angle triangle
+
+let a = prompt("enter no in terminal ")
+
+for(let i=1; i<=a; i++){
+    for(let j=a; j>=i; j--){
+        process.stdout.write("* ")
+    }
+    console.log();
+}
+
+//Q. Mirror right angle triangle (combo of inverted and right angle triangle)
+
+let a = prompt("enter no in terminal ")
+
+for(let i=1; i<=a; i++){
+    //inverted
+    for(let j=1; j<=a-i; j++){
+        process.stdout.write("  ")
+    }
+    //right angle
+    for(let j=1; j<=i; j++){
+        process.stdout.write("* ")
+    }
+    console.log();
+}
