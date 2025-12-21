@@ -392,4 +392,10 @@ for(let i=1; i<=a; i++){
     console.log();
 }
 
-//-----------------------------------------
+//------------Arrays-------------
+
+let arr = []
+arr.push(100)
+arr.push(10, 20)
+
+console.log(arr)
