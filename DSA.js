@@ -399,3 +399,107 @@ arr.push(100)
 arr.push(10, 20)
 
 console.log(arr)
+
+//Q. Taking values from prompt and then fill those into valuses into an empty array
+
+let arr = new Array(3);
+
+for(let i = 0; i<arr.length; i++){
+    arr[i] = Number(prompt("enter no."))
+}   
+
+console.log(arr);
+
+//Q. Adding values from array
+
+let arr = [1, 2, 3, 4, 6, 7, 8]
+let sum = 0
+
+for(let i=0; i<arr.length; i++){
+    sum = sum + arr[i]
+}
+
+console.log(sum);
+
+//Q. Print max element form array
+
+let arr = [10, 28, 300, 20]
+let max = arr[0];
+
+for(let i=1; i<arr.length; i++){
+    if(max<arr[i]){
+        max = arr[i]
+    }
+}
+console.log(max);
+
+//Q. print the minimum elemt from an array
+
+let arr = [20, 10, 5, 8, 2]
+let min = arr[0]
+
+for(let i=1; i<arr.length; i++){
+    if(min>arr[i]){
+        min = arr[i]
+    }
+}
+
+//Q. Print max and 2nd max element from array
+
+let arr = [10, 28, 40, 5, 2, 200, 100, 50]
+let max = Math.max(arr[0], arr[1])
+let second = Math.min(arr[0], arr[1])
+
+for(let i=2; i<arr.length; i++){
+    if(arr[i]>max){
+        second = max
+        max = arr[i]
+    }else if(arr[i]>second && max != arr[i]){
+        second = arr[i]
+    }
+}
+console.log(second);
+console.log(max)
+
+//Q. Reverse an array
+
+let arr = [10, 20, 30, 40, 50]
+let newarr = new Array(arr.length)
+
+let j = 0
+for(let i=arr.length-1; i>=0; i--){
+    newarr[j] = arr[i]
+    j++
+}
+console.log(newarr);
+
+//-------------------------------------With different approach
+
+let arr = [10, 20, 30, 40, 50]
+
+let i = 0, j = arr.length-1;
+while(i!=j){
+    let temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+    i++
+    j--
+}
+console.log(arr);
+
+//Q. Swiping values of I and J, move all zeroes to left side and all one to right side
+
+let arr = [1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1]
+
+let i = 0, j = 0;
+while(i<arr.length){
+    if(arr[i]==0){
+        let temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp;
+        j++
+    }
+    i++
+}
+console.log(arr);
+
