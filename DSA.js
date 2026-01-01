@@ -503,4 +503,4 @@ while(i<arr.length){
 }
 console.log(arr);
 
-//Q.-----
+//Q.--------
